@@ -8,7 +8,24 @@ interface TransactionsState {
 }
 
 const initialState: TransactionsState = {
-    transactions: []
+    transactions: [
+        {
+            id: 'id-123',
+            type: 'income',
+            amount: 400,
+            categoryId: 'cat-1',
+            accountId: '123',
+            date: '2025-12-3'
+        },
+        {
+            id: 'id-123',
+            type: 'expense',
+            amount: 500,
+            categoryId: 'cat-1',
+            accountId: '123',
+            date: '2025-12-3'
+        },
+    ]
 }
 
 export const transactionsSlice = createSlice({
