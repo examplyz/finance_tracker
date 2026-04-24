@@ -34,14 +34,20 @@ const AuthProvider= ({children} : {children: ReactNode}) => {
     }, [])
 
     const register = useCallback(async (fullName: string , password:string) => {
-        const passwordHash = await hashPassword(password);
-        const createdAt = new Date().toISOString()
-        storage.set({fullName , password: passwordHash ,createdAt })
-        setIsRegistered(true)
-        setUser({fullName, createdAt})
+       try {
+           const passwordHash = await hashPassword(password);
+           const createdAt = new Date().toISOString()
+           storage.set({fullName , password: passwordHash ,createdAt })
+           setIsRegistered(true)
+           setUser({fullName, createdAt})
+           return true
+       }catch {
+           return false
+       }
+
     }, [])
 
-    const login = useCallback(async (password: string) => {
+    const login = useCallback(async (password: string): Promise<boolean> => {
         const stored = storage.get()
         if(!stored) return false;
         const ok = await verifyPassword(stored.password , password)

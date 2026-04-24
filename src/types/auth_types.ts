@@ -12,7 +12,7 @@ export interface AuthContextValue {
     user: IUser | null;
     isAuthenticated: boolean;
     isRegistered: boolean;
-    register: (name: string, password: string) => Promise<void>;
+    register: (name: string, password: string) => Promise<boolean>;
     login: (password: string) => Promise<boolean>;
     logout: () => void;
     deleteAccount: () => void;
