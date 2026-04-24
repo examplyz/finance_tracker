@@ -1,16 +1,21 @@
 import AuthPage from "./AuthPage/AuthPage.tsx";
-import type {ReactElement} from "react";
+import DashboardPage from "./DashboardPage/DashboardPage.tsx";
+import {type JSX} from "react";
 
 interface IPage {
     path: string,
-    page: ReactElement,
+    page: JSX.Element,
 }
 
-const pages:[IPage] = [
+const pages:IPage[] = [
     {
         path:"/auth",
         page: <AuthPage/>
+    },
+    {
+        path:"/dashboard",
+        page: <DashboardPage/>
     }
 ]
 
-export default  pages
+export default pages

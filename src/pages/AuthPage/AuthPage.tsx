@@ -1,5 +1,5 @@
 import {useAuth} from "../../app/AuthProvider.tsx";
-import Logo from "../../components/shared/Logo.tsx";
+import Logo from "../../components/Logo.tsx";
 import Input from "../../components/ui/Input.tsx";
 import Button from "../../components/ui/Button.tsx";
 import {type MouseEvent, useEffect, useState} from "react";
