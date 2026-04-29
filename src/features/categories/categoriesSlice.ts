@@ -6,35 +6,42 @@ const defaultCategories: Category[] = [
     {
         id: 'cat-1' ,
         name: 'Food / Groceries' ,
-        color: 'red',
+        color: 'oklch(75% 0.183 55.934)',
         icon: "Some icon",
         isDefault: true
     },
     {
         id: 'cat-2' ,
         name: 'Healthcare' ,
-        color: 'red',
+        color: 'oklch(74.6% 0.16 232.661)',
         icon: "Some icon",
         isDefault: true
     },
     {
         id: 'cat-3' ,
         name: 'Travel' ,
-        color: 'red',
+        color: 'oklch(70.2% 0.183 293.541)',
         icon: "Some icon",
         isDefault: true
     },
     {
         id: 'cat-4' ,
         name: 'Housing' ,
-        color: 'red',
+        color: 'oklch(76.5% 0.177 163.223)',
         icon: "Some icon",
         isDefault: true
     },
     {
         id: 'cat-5' ,
         name: 'Miscellaneous' ,
-        color: 'red',
+        color: 'oklch(70.4% 0.191 22.216)',
+        icon: "Some icon",
+        isDefault: true
+    },
+    {
+        id: 'cat-6' ,
+        name: 'Miscellaneous' ,
+        color: 'oklch(70.4% 0.191 22.216)',
         icon: "Some icon",
         isDefault: true
     },

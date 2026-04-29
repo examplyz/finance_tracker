@@ -1,7 +1,7 @@
 import {useAuth} from "../../app/AuthProvider.tsx";
 import Logo from "../../components/Logo.tsx";
-import Input from "../../components/ui/Input.tsx";
-import Button from "../../components/ui/Button.tsx";
+import Input from "../../components/Input.tsx";
+import Button from "../../components/Button.tsx";
 import {type MouseEvent, useEffect, useState} from "react";
 import {validateFullName , validatePassword} from "../../utils/validate.ts";
 import {useNavigate} from "react-router";

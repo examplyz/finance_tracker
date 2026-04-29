@@ -15,7 +15,7 @@ const initialState: TransactionsState = {
             amount: 400,
             categoryId: 'cat-1',
             accountId: '123',
-            date: '2025-12-3'
+            date: '2026-4-30'
         },
         {
             id: 'id-123',
@@ -23,7 +23,23 @@ const initialState: TransactionsState = {
             amount: 500,
             categoryId: 'cat-1',
             accountId: '123',
-            date: '2025-12-3'
+            date: '2026-4-20'
+        },
+        {
+            id: 'id-123',
+            type: 'expense',
+            amount: 500,
+            categoryId: 'cat-4',
+            accountId: '123',
+            date: '2026-4-20'
+        },
+        {
+            id: 'id-123',
+            type: 'expense',
+            amount: 700,
+            categoryId: 'cat-6',
+            accountId: '123',
+            date: '2026-4-20'
         },
     ]
 }

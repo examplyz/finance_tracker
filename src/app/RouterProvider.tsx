@@ -2,7 +2,7 @@ import {BrowserRouter, Navigate, Route, Routes} from "react-router";
 import pages from "../pages/pagesConfiguration.tsx"
 import {useAuth} from "./AuthProvider.tsx";
 import AuthPage from "../pages/AuthPage/AuthPage.tsx";
-import Layout from "../components/Layout/Layout.tsx";
+import Layout from "../components/Layout.tsx";
 
 const RouterProvider = () => {
     const {user} = useAuth()
