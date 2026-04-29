@@ -2,7 +2,7 @@ import {Link, Outlet, useLocation} from "react-router";
 import Logo from "./Logo.tsx";
 import { LuReceipt,  LuWallet , LuX , LuMenu , LuCreditCard , LuSettings , LuLayoutDashboard } from "react-icons/lu";
 import { SiGoogleanalytics } from "react-icons/si";
-import {type JSX, useState} from "react";
+import { useState} from "react";
 import {useAuth} from "../app/AuthProvider.tsx";
 import type {IconType} from "react-icons";
 

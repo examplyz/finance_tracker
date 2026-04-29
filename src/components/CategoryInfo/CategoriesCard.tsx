@@ -1,5 +1,5 @@
 import type {ReactNode} from "react";
-import CategoryCard from "./CategoryCard.tsx";
+import CategoryInfo from "./CategoryInfo.tsx";
 import type {ICategoryWithSpend} from "../../features/categories/categoriesSelectors.ts";
 
 interface ICategoriesCard {
@@ -19,7 +19,7 @@ const CategoriesCard = ({title, className, categories, icon , totalSpend} : ICat
             </div>
             <div>
                 {categories.map(category => {
-                    return <CategoryCard category={category} key={category.id} color={category.color} spendFromTotal={(category.spend/totalSpend) * 100}/>
+                    return <CategoryInfo category={category} key={category.id} color={category.color} spendFromTotal={(category.spend/totalSpend) * 100}/>
                 })}
             </div>
         </div>

@@ -2,9 +2,9 @@ import {createSelector} from "@reduxjs/toolkit";
 import type {RootState} from "../../app/store.ts";
 import type {Transaction} from "../../types";
 import {isInCurrentMonth} from "../../utils/isInCurrentMonth.ts";
+import {selectTransactions} from "../transactions/transactionsSelectors.ts";
 
 const selectAccounts = (state: RootState) => state.accountsReducer.accounts
-export const selectTransactions = (state: RootState) => state.transactionsReducer.transactions
 
 const getTransactionImpact = (transaction: Transaction , accountId: string):number => {
     switch (transaction.type){
@@ -82,15 +82,13 @@ export const selectThisMonth = createSelector(
     selectTransactions,
     selectAccounts ,
     (transactions , accounts): IThisMonthTransactions => {
-        const thisMonthData = accounts.reduce((thisMonth , a) => {
+        return accounts.reduce((thisMonth , a) => {
             const data = getThisMonthIncomeAndExpenses(transactions , a.id)
             return {
                 income: thisMonth.income + data.income,
                 expenses: thisMonth.expenses + data.expenses
             }
         } , {income: 0 , expenses:0})
-
-        return thisMonthData
     }
     )
 

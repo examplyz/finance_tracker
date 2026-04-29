@@ -8,7 +8,22 @@ interface BudgetsState {
 }
 
 const initialState: BudgetsState = {
-    budgets: []
+    budgets: [
+        {
+            id: 'bud-1',
+            categoryId:'cat-6',
+            limit: 600,
+            from: "2026-03-31",
+            until: "2026-04-30",
+        },
+        {
+            id: 'bud-2',
+            categoryId:'cat-4',
+            limit: 600,
+            from: "2026-03-31",
+            until: "2026-04-30",
+        }
+    ]
 }
 
 export const budgetsSlice = createSlice({

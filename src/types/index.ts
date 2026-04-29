@@ -2,6 +2,7 @@ export type TransactionType = 'income' | 'expense' | 'transfer';
 export type Currency = 'USD' | 'EUR' ;
 export type Theme = 'light' | 'dark';
 
+
 export interface Account {
     id: string;
     name: string;
@@ -32,7 +33,8 @@ export interface Budget {
     id: string;
     categoryId: string;
     limit: number;
-    month: string;
+    from: string; // ISO date
+    until: string; // ISO date
 }
 
 export interface Settings {

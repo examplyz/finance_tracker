@@ -1,11 +1,11 @@
 import DashboardInfo from "../../components/DashboardInfo/DashboardInfo.tsx";
-import CategoriesInfo from "../../components/CategoryInfo/CategoriesInfo.tsx";
+import CatBudInfo from "../../components/CategoriesAndBudgetsInfo.tsx";
 
 const DashboardPage = () => {
 
     return <div className={'p-4'}>
         <DashboardInfo/>
-        <CategoriesInfo/>
+        <CatBudInfo/>
     </div>
 }
 

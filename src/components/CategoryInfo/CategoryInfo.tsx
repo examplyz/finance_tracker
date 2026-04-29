@@ -7,7 +7,7 @@ interface ICategoryCard {
     color: string,
 }
 
-const CategoryCard = ({category , className = '' , spendFromTotal, color} : ICategoryCard) => {
+const CategoryInfo = ({category , className = '' , spendFromTotal, color} : ICategoryCard) => {
     return (
         <div className={'mb-2 ' + className}>
             <div className={'flex justify-between mb-2'}>
@@ -24,4 +24,4 @@ const CategoryCard = ({category , className = '' , spendFromTotal, color} : ICat
     )
 }
 
-export default CategoryCard
+export default CategoryInfo
